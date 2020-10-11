@@ -17,6 +17,7 @@ export default {
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
+    '~/assets/scss/main.scss'
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
@@ -38,7 +39,16 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    '@nuxtjs/style-resources',
   ],
+
+  styleResources: {
+    // your settings here
+    // sass: [],
+    scss: ['~/assets/scss/common/_variables.scss', '~/assets/scss/common/_mixins.scss', '~/assets/scss/common/_functions.scss'],
+    // less: [],
+    // stylus: []
+  },
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},
